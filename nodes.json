@@ -4,19 +4,29 @@
   		":ip": "192.168.35.5",
 			"ports": [],
 			":memory": 1024,
+      "box": "centos/7",
 			":bootstrap": "bootstrap-node.sh"
 		},
 		"node02.example.com": {
 			":ip": "192.168.35.10",
 			"ports": [],
 			":memory": 1024,
+      "box": "centos/7",
 			":bootstrap": "bootstrap-node.sh"
 		},
-		"node03.example.com": {
+		"vault-demo.example.com": {
 			":ip": "192.168.35.20",
 			"ports": [],
 			":memory": 1024,
-			":bootstrap": "bootstrap-node.sh"
+      "box": "centos/7",
+			":bootstrap": "bootstrap-vault-demo-node.sh"
+		},
+    "vault-consul.example.com": {
+			":ip": "192.168.35.30",
+			"ports": [],
+			":memory": 1024,
+      "box": "centos/7",
+			":bootstrap": "bootstrap-vault-consul-node.sh"
 		}
 	}
 }
