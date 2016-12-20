@@ -14,7 +14,7 @@
       "box": "centos/7",
 			":bootstrap": "bootstrap-node.sh"
 		},
-		"vault-demo.example.com": {
+    "vault-demo.example.com": {
 			":ip": "192.168.35.20",
 			"ports": [],
 			":memory": 1024,
@@ -27,6 +27,25 @@
 			":memory": 1024,
       "box": "centos/7",
 			":bootstrap": "bootstrap-vault-consul-node.sh"
-		}
+		},
+    "theforeman.example.com": {
+			":ip": "192.168.35.40",
+			"ports": [
+        {
+          ":host": 9080,
+          ":guest": 80,
+          ":id": "http"
+        },
+        {
+          ":host": 9443,
+          ":guest": 443,
+          ":id": "https"
+        }
+      ],
+			":memory": 1024,
+      "box": "centos/7",
+			":bootstrap": "bootstrap-theforeman-node.sh"
+		},
+
 	}
 }
